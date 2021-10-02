@@ -8,5 +8,6 @@ public class DisplayName {
         System.out.println("enter your name");
         String name = scanner.nextLine();
         System.out.println("your name is: " + name);
+
     }
 }

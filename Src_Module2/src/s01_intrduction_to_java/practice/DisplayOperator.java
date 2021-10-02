@@ -13,5 +13,6 @@ public class DisplayOperator {
         height = sc.nextFloat();
         float area = width * height;
         System.out.println("area is :" + area);
+
     }
 }

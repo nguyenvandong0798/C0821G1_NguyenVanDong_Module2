@@ -2,7 +2,7 @@ package s01_intrduction_to_java.exercise;
 
 import java.util.Scanner;
 
-public class ChangeMoney {
+public class ChangMoney {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         long vn = 23000;
@@ -11,6 +11,6 @@ public class ChangeMoney {
         usd = sc.nextLong();
         result = usd * vn;
         System.out.println("result is:" + result);
-    }
 
+    }
 }

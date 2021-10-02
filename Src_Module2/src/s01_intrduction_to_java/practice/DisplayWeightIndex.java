@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class DisplayWeightIndex {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         double weight, height, bmi;
         System.out.println("enter your weight");
         weight = scanner.nextDouble();
@@ -20,6 +19,6 @@ public class DisplayWeightIndex {
             System.out.println("Overweight");
         else
             System.out.println("Obese");
+
     }
 }
-

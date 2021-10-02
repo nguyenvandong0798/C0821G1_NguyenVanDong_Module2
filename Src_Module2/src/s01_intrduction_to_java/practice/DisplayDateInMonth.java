@@ -2,7 +2,7 @@ package s01_intrduction_to_java.practice;
 
 import java.util.Scanner;
 
-public class DisplayDayInMonth {
+public class DisplayDateInMonth {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("enter a month:");
@@ -34,5 +34,6 @@ public class DisplayDayInMonth {
             System.out.printf("month '%d' has %s", month,Dayinmonth );
         else
             System.out.print("invalid input");
+
     }
 }
