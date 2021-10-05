@@ -12,11 +12,14 @@ public class AddIndexInArray {
         int index = sc.nextInt();
         for (int i = 0; i < array.length; i++){
             if (array[index] == array[i]);
-            array[i] = i + 1;
-            for (int j = 0; j < array.length; j++){
-                number = array[index];
-            }
+            array[i] = array[i + 1];
+//            for (int j = 0; j < array.length; j++){
+//                if (array[j] == array[index]){
+//                    number = array[j];
+//
+//                }
             System.out.println(array[i]);
+            }
+
         }
     }
-}
