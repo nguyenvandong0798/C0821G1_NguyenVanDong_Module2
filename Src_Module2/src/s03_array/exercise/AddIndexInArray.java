@@ -10,14 +10,15 @@ public class AddIndexInArray {
         int number = sc.nextInt();
         System.out.println("enter index:");
         int index = sc.nextInt();
-        for (int i = 0; i < array.length; i++){
-            if (array[index] == array[i]);
+        int i;
+        for (i = 0; i < array.length; i++) {
+            if (array[index] == array[i]) ;
             array[i] = array[i + 1];
-//            for (int j = 0; j < array.length; j++){
-//                if (array[j] == array[index]){
-//                    number = array[j];
-//
-//                }
+        }
+        for (int j = 0; j < array.length; j++){
+            if (array[j] == array[index]){
+                number = array[j];
+                }
             System.out.println(array[i]);
             }
 
