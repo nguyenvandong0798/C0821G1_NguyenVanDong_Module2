@@ -1,15 +1,13 @@
 package s04_class_and_object.exercise;
 
-import javax.xml.crypto.Data;
-
 import java.util.Arrays;
 import java.util.Date;
 
-public class ClassFan {
+public class StopWatch {
     private Date startTime;
     private Date endTime;
 
-    public ClassFan() {
+    public StopWatch() {
         this.startTime = new Date();
     }
 
@@ -26,11 +24,11 @@ public class ClassFan {
     }
 
     public static void main(String[] args) {
-        ClassFan stopWatch = new ClassFan();
+        StopWatch stopWatch = new StopWatch();
 
         stopWatch.start();
 
-        double[] arr1 = new double[50000];
+        double[] arr1 = new double[90000];
         for(int i= 0; i<50000; i++){
             arr1[i] = Math.random()*100 + 1;
         }

@@ -2,6 +2,7 @@ package s04_class_and_object.practice;
 
 public class ClassOfRectangel {
     double width, height;
+
     public ClassOfRectangel(double width, double height) {
         this.width = width;
         this.height = height;
@@ -18,4 +19,5 @@ public class ClassOfRectangel {
     public String display() {
         return "Rectangle{" + "width=" + width + ", height=" + height + "}";
     }
+
 }
