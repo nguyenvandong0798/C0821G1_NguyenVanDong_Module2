@@ -10,13 +10,17 @@ public class AddIndexInArray {
         int number = sc.nextInt();
         System.out.println("enter index:");
         int index = sc.nextInt();
-        for (int i = array.length - 1; i < index; i--) {
-            if (array[index] == array[i]) ;
-            array[i] = array[i - 1];
-        }
-        array[index] = number;
-        for (int j = 0; j < array.length; j++){
+        if (index > array.length || index < 0)
+            System.out.println("Not found");
+        else {
+            for (int i = array.length - 1; i >= index; i--) {
+                if (array[index] == array[i]) ;
+                array[i] = array[i - 1];
+            }
+            array[index] = number;
+            for (int j = 0; j < array.length; j++) {
                 System.out.println(array[j]);
             }
+        }
         }
     }
