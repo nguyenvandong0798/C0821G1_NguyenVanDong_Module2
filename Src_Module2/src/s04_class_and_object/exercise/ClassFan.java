@@ -1,34 +1,67 @@
 package s04_class_and_object.exercise;
 
+import java.sql.SQLOutput;
+import java.util.Set;
+
 public class ClassFan {
-    private final int SLOW = 1;
-    private final int MEDIUM = 2;
-    private final int FAST = 3;
-    private boolean status = false;
+    public final int SLOW = 1;
+    public final int MEDIUM = 2;
+    public final int FAST = 3;
+    public boolean status = false;
+    private int speed = SLOW;
     private double radius = 5;
     private String color = "blue";
-    private String infor;
 
-    public ClassFan(final int FAST, double radius, String color, String infor){
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    public boolean isOn() {
+        return status;
+    }
+
+    public void setOn(boolean on) {
+        this.status = on;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+
+    public void setRadius(double radius) {
         this.radius = radius;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
         this.color = color;
-        this.infor = infor;
     }
 
 
-    public static void main(String[] args) {
-        ClassFan fan1 = new ClassFan(3,10, "yelow", "fan is on");
-        System.out.println("fan1:");
-        System.out.print("speed: " + fan1.FAST+ " ");
-        System.out.print("radius: " + fan1.radius+ " ");
-        System.out.print("color: " + fan1.color+ " ");
-        System.out.println("Status: " + fan1.infor+ " ");
+    public String toString(){
+        String inf = "";
+        if (this.status){
+            System.out.println("fant 1:");
+            inf = "speed " + FAST + "radius " + radius +" color " +color + "status " + status;
+        }else{
+            inf = "speed" + MEDIUM + "radius " + radius +" color" + "yellow" + "status" + status;
+        }
+        return inf;
+    }
 
-        ClassFan fan2 = new ClassFan(1,5, "blue", "fan is off");
-        System.out.println("fan2:");
-        System.out.print("speed: " + fan2.MEDIUM + " ");
-        System.out.print("radius: " + fan2.radius+ " ");
-        System.out.print("color: " + fan2.color+ " ");
-        System.out.print("Status: " + fan2.infor);
+
+
+    public static void main(String[] args) {
+        ClassFan fan1 = new ClassFan();
+        fan1.setSpeed(fan1.FAST);
+        fan1.setRadius(10);
+        fan1.setColor("yellow");
+        fan1.setOn(true);
+        System.out.println(fan1);
+
     }
 }
