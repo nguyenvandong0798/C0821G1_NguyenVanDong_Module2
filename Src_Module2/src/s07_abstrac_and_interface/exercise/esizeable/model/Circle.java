@@ -1,8 +1,10 @@
 package s07_abstrac_and_interface.exercise.esizeable.model;
 
+import s07_abstrac_and_interface.exercise.esizeable.service.Resizeable;
 import s07_abstrac_and_interface.exercise.esizeable.service.Shape;
+import s07_abstrac_and_interface.practice.animal_and_interface_editable.service.Editable;
 
-public class Circle extends Shape {
+public class Circle extends Shape implements Resizeable {
     private double radius = 1.0;
 
     public Circle(){
@@ -48,4 +50,5 @@ public class Circle extends Shape {
     public void resize(double percent) {
         this.radius = this.radius * (percent / 50);
     }
-}
+
+    }

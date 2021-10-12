@@ -1,8 +1,9 @@
 package s07_abstrac_and_interface.exercise.esizeable.model;
 
+import s07_abstrac_and_interface.exercise.esizeable.service.Resizeable;
 import s07_abstrac_and_interface.exercise.esizeable.service.Shape;
 
-public class Rectangle extends Shape {
+public class Rectangle extends Shape implements Resizeable {
         private double width = 1.0;
         private double length = 1.0;
 

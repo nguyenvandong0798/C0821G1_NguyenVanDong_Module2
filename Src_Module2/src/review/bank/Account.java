@@ -124,12 +124,12 @@ public class Account {
         account1.transfers1();
         System.out.println(account1 + "\n");
 
-        //        Thông tin của account 2
+//         Thông tin của account 2
         Account account2 = new Account(1251223148, "NGUYEN VAN TEO",50000);
         System.out.println(account2+ "\n");
 
-//account2 Nhận được thêm số tiền
+//         account2 Nhận được thêm số tiền
         account2.getAcount1();
-        System.out.println(account2);
+        System.out.println(account2.transfers1());
     }
 }
