@@ -45,7 +45,7 @@ public class ClassFan {
     public String toString(){
         String inf = "";
         if (this.status){
-            System.out.println("fant 1:");
+            System.out.println("fan:");
             inf = "speed " + FAST + "radius " + radius +" color " +color + "status " + status;
         }else{
             inf = "speed" + MEDIUM + "radius " + radius +" color" + "yellow" + "status" + status;
@@ -56,12 +56,12 @@ public class ClassFan {
 
 
     public static void main(String[] args) {
-        ClassFan fan1 = new ClassFan();
-        fan1.setSpeed(fan1.FAST);
-        fan1.setRadius(10);
-        fan1.setColor("yellow");
-        fan1.setOn(true);
-        System.out.println(fan1);
+        ClassFan fan = new ClassFan();
+        fan.setSpeed(fan.FAST);
+        fan.setRadius(10);
+        fan.setColor("yellow");
+        fan.setOn(true);
+        System.out.println(fan);
 
     }
 }

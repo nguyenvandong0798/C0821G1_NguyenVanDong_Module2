@@ -43,7 +43,7 @@ public class Account {
         Scanner scanner = new Scanner(System.in);
         double output = 0;
         while (output < 50000) {
-            System.out.println("nhập lại số tiền cần rút từ 50000 trở lên" + "\n");
+            System.out.println("nhập số tiền cần rút từ 50000 trở lên" + "\n");
             output = scanner.nextDouble();
         }
         return this.money = this.money - (output + tax);

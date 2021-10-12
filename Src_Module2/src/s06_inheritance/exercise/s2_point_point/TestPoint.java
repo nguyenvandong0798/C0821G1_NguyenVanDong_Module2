@@ -1,6 +1,6 @@
 package s06_inheritance.exercise.s2_point_point;
 
-public class MainPoint {
+public class TestPoint {
     public static void main(String[] args) {
         Point2D point2D = new Point2D(2.2f, 5.0f);
         System.out.println(point2D);
