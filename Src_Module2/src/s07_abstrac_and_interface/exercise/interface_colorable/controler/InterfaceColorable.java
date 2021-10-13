@@ -1,9 +1,9 @@
-package s07_abstrac_and_interface.exercise.unterface_colorable.controler;
+package s07_abstrac_and_interface.exercise.interface_colorable.controler;
 
 import s07_abstrac_and_interface.exercise.esizeable.model.Rectangle;
 import s07_abstrac_and_interface.exercise.esizeable.model.Square;
 import s07_abstrac_and_interface.exercise.esizeable.service.Shape;
-import s07_abstrac_and_interface.exercise.unterface_colorable.service.Colorable;
+import s07_abstrac_and_interface.exercise.interface_colorable.service.Colorable;
 
 public class InterfaceColorable {
     public static void main(String[] args) {

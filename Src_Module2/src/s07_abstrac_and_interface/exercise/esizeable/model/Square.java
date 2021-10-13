@@ -2,7 +2,7 @@ package s07_abstrac_and_interface.exercise.esizeable.model;
 
 import s07_abstrac_and_interface.exercise.esizeable.service.Resizeable;
 import s07_abstrac_and_interface.exercise.esizeable.service.Shape;
-import s07_abstrac_and_interface.exercise.unterface_colorable.service.Colorable;
+import s07_abstrac_and_interface.exercise.interface_colorable.service.Colorable;
 
 public class Square extends Shape implements Resizeable,Colorable {
 
