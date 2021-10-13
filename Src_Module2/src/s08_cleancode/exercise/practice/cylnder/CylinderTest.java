@@ -1,4 +1,4 @@
-package s08_cleancode.exercise.practice.Cylnder;
+package s08_cleancode.exercise.practice.cylnder;
 
 public class CylinderTest {
         public static double getVolume(int radius, int height){

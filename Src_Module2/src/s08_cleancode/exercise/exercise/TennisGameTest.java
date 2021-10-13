@@ -1,7 +1,7 @@
 package s08_cleancode.exercise.exercise;
 
 public class TennisGameTest {
-    public static String getScore(String FirstPlayerName, String SecondPlayerName, int firstCore, int secondCore) {
+    public static String getScore(String firstPlayerName, String secondPlayerName, int firstCore, int secondCore) {
         String score = "";
         int tempScore=0;
         if (firstCore==secondCore)
