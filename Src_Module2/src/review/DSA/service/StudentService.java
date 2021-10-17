@@ -54,18 +54,17 @@ public class StudentService implements IsStudentService {
 
     @Override
     public void edit() {
-        System.out.println(System.in);
         System.out.println("nhập vào index cần chỉnh sửa");
         int index = Integer.parseInt(scanner.nextLine());
         for (int i = 0; i < studentList.size(); i++) {
             if (i == index) {
                 System.out.println("Nhập id cần edit");
                 int id = Integer.parseInt(scanner.nextLine());
-                System.out.println("Nhập tên cần edit thêm mới");
+                System.out.println("Nhập tên cần edit");
                 String name = (scanner.nextLine());
-                System.out.println("Nhập địa chỉ cần edit thêm mới");
+                System.out.println("Nhập địa chỉ cần edit");
                 String address = (scanner.nextLine());
-                System.out.println("Nhập điểm cần edit thêm mới");
+                System.out.println("Nhập điểm cần edit");
                 int point = Integer.parseInt(scanner.nextLine());
                 studentList.get(i).setId(id);
                 studentList.get(i).setName(name);
