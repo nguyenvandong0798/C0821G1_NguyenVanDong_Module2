@@ -1,19 +1,62 @@
 package s08_cleancode.exercise.practice.fizzbuzz;
 
-public class FizzbuzzTest {
-    public static String fizzBuzz(int number){
-        boolean isFizz = number % 3 == 0;
-        boolean isBuzz = number % 5 == 0;
+import org.junit.jupiter.api.Test;
 
-        if(isFizz && isBuzz)
-            return "FizzBuzz";
+import static org.junit.jupiter.api.Assertions.*;
 
-        if(isFizz)
-            return "Fizz";
+class FizzBuzzTest {
 
-        if(isBuzz)
-            return "Buzz";
+    @Test
+    void testFizz3() {
+        int number = 3;
+        String expected = "Fizz";
 
-        return number + "";
+        String result = Fizzbuzz.fizzBuzz(number);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    void testFizz6() {
+        int number = 6;
+        String expected = "Fizz";
+
+        String result = Fizzbuzz.fizzBuzz(number);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    void testBuzz5() {
+        int number = 5;
+        String expected = "Buzz";
+
+        String result = Fizzbuzz.fizzBuzz(number);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    void testBuzz10() {
+        int number = 10;
+        String expected = "Buzz";
+
+        String result = Fizzbuzz.fizzBuzz(number);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    void testFizzBuzz15() {
+        int number = 15;
+        String expected = "FizzBuzz";
+
+        String result = Fizzbuzz.fizzBuzz(number);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    void testFizzBuzz30() {
+        int number = 30;
+        String expected = "FizzBuzz";
+
+        String result = Fizzbuzz.fizzBuzz(number);
+        assertEquals(expected, result);
     }
 }
