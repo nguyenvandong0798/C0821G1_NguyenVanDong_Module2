@@ -1,10 +1,8 @@
 package review.DSA.controller;
 
 import review.DSA.service.IsStudentService;
-import review.DSA.service.Student;
 import review.DSA.service.StudentService;
 
-import java.util.Collections;
 import java.util.Scanner;
 
 public class MainController {

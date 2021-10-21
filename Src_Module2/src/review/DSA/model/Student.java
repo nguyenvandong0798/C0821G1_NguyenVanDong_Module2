@@ -1,7 +1,5 @@
-package review.DSA.service;
+package review.DSA.model;
 
-
-import java.util.Comparator;
 
 public class Student implements Comparable<Student> {
     private int id;

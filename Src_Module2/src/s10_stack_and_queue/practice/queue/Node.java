@@ -7,6 +7,5 @@ public class Node {
     public Node(int key){
         this.key = key;
         this.next = null;
-
     }
 }
