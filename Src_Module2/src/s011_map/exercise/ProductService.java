@@ -17,15 +17,15 @@ public class ProductService implements IsProductService {
 
     @Override
     public void addAll() {
-        System.out.println("nhập index");
+        System.out.print("nhập index ");
         int index = Integer.parseInt(scanner.nextLine());
-        System.out.println("nhập tên");
+        System.out.print("nhập tên ");
         String name = (scanner.nextLine());
-        System.out.println("nhập code");
+        System.out.print("nhập code ");
         int code = Integer.parseInt(scanner.nextLine());
-        System.out.println("nhập price");
+        System.out.print("nhập price ");
         int price = Integer.parseInt(scanner.nextLine());
-        System.out.println("nhập nhà sản xuất");
+        System.out.print("nhập nhà sản xuất ");
         String origin = (scanner.nextLine());
         Product product = new Product(name, code,price, origin);
         listProduct.add(index, product);
@@ -33,17 +33,17 @@ public class ProductService implements IsProductService {
 
     @Override
     public void edit() {
-        System.out.println("nhập index edit");
+        System.out.println("nhập index edit ");
         int index = Integer.parseInt(scanner.nextLine());
         for (int i = 0; i < listProduct.size(); i++) {
             if (index == i) ;
-            System.out.println("nhập tên cần edit");
+            System.out.print("nhập tên cần edit ");
             String name = (scanner.nextLine());
-            System.out.println("nhập code cần edit");
+            System.out.print("nhập code cần edit ");
             int code = Integer.parseInt(scanner.nextLine());
-            System.out.println("nhập price cần edit");
+            System.out.print("nhập price cần edit ");
             int price = Integer.parseInt(scanner.nextLine());
-            System.out.println("nhập nơi sản xuất cần edit");
+            System.out.print("nhập nơi sản xuất cần edit ");
             String origin = (scanner.nextLine());
             listProduct.get(i).setName(name);
             listProduct.get(i).setCode(code);
@@ -54,10 +54,18 @@ public class ProductService implements IsProductService {
 
     @Override
     public void reMove() {
-        System.out.println("nhập index cần xoá");
-        int index = Integer.parseInt(scanner.nextLine());
-        listProduct.remove(index);
-
+        boolean check = false;
+        System.out.println("nhập code cần xoá");
+        int code = Integer.parseInt(scanner.nextLine());
+        for (int i = 0; i<listProduct.size(); i++) {
+            if (listProduct.get(i).getCode() == code) {
+                listProduct.remove(i);
+                check = true;
+                break;
+            }
+        }if (check == false){
+            System.out.println(" not code");
+        }
     }
 
     @Override

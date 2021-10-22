@@ -15,5 +15,4 @@ public interface IsStudentService {
 
     void ranger();
 
-
 }
