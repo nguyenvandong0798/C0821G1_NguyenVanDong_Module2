@@ -5,7 +5,6 @@ import review.DSA.model.Student;
 import java.util.Scanner;
 
 public class StudentSv implements IsStudentServicee {
-    Scanner scanner = new Scanner(System.in);
     private static Student[] studentList = new Student[3];
 
     static {

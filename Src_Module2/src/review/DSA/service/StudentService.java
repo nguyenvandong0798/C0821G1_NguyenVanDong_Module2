@@ -26,15 +26,15 @@ public class StudentService implements IsStudentService {
 
     @Override
     public void addNewStudent() {
-        System.out.println("Nhập vị trí cần thêm mới");
+        System.out.print("Nhập vị trí cần thêm mới");
         int index = Integer.parseInt(scanner.nextLine());
-        System.out.println("Nhập id cần thêm mới");
+        System.out.print("Nhập id cần thêm mới");
         int id = Integer.parseInt(scanner.nextLine());
-        System.out.println("Nhập tên cần thêm mới");
+        System.out.print("Nhập tên cần thêm mới");
         String name = (scanner.nextLine());
-        System.out.println("Nhập địa chỉ cần thêm mới");
+        System.out.print("Nhập địa chỉ cần thêm mới");
         String address = (scanner.nextLine());
-        System.out.println("Nhập điểm cần thêm mới");
+        System.out.print("Nhập điểm cần thêm mới");
         int point = Integer.parseInt(scanner.nextLine());
         Student student = new Student(id, name, address, point);
         studentList.add(index, student);
