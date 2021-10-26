@@ -23,7 +23,6 @@ public class IsExperienceService {
             String name = (scanner.nextLine());
 
 //            Check date of birth.
-
                 System.out.print("enter year of birth dd-MM-yyyy ");
                 SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
                 Date date = dateFormat.parse(scanner.nextLine());

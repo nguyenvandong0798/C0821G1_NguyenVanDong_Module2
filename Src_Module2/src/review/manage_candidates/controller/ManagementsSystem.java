@@ -34,7 +34,6 @@ public class ManagementsSystem {
                         System.out.println("1: add Experience");
                         System.out.println("2: update Experience");
                         System.out.println("3: remove Experience");
-                        System.out.println("4: Search Experience");
                         System.out.println("5: Exit");
                         int optionExperience = Integer.parseInt(scanner.nextLine());
                         if (optionExperience == 5) {
