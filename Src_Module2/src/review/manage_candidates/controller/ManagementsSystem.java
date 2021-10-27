@@ -49,8 +49,6 @@ public class ManagementsSystem {
                             case 3:
                                 IsExperienceService.removeExperience();
                                 break;
-                            case 4:
-                                IsExperienceService.searchExperience();
                         }
                     }
                     break;
