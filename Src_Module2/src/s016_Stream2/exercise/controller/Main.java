@@ -36,8 +36,6 @@ public class Main {
                     break;
                 case 3:
                     ProductService.Search();
-                case 4:
-                    ProductService.writerToFile();
             }
         }
     }
