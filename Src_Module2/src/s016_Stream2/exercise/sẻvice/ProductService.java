@@ -15,10 +15,10 @@ public class ProductService {
     List<Product> productWriteFile;
 
     {
-        productWriteFile = writeToFile("src/bai_17_serialization/bai_tap/product.txt", listProduct);
+        productWriteFile = writeToFile("D:\\3.sourcecode_moule_2\\Src_Module2\\src\\s016_Stream2\\exercise\\model\\product.txt", listProduct);
     }
 
-    List<Product> productReadFile = ReadToFile("src/bai_17_serialization/bai_tap/product.txt");
+    List<Product> productReadFile = ReadToFile("D:\\3.sourcecode_moule_2\\Src_Module2\\src\\s016_Stream2\\exercise\\model\\product.txt");
 
     public static void addAll() {
         Scanner scanner = new Scanner(System.in);
