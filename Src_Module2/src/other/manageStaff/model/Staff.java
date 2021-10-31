@@ -61,11 +61,6 @@ public class Staff {
 
     @Override
     public String toString() {
-        return "Staff{" +
-                "name='" + name + '\'' +
-                ", age=" + Date +
-                ", code=" + code +
-                ", address='" + address + '\'' +
-                '}';
+        return this.name + "," + this.Date + "," + this.code + "," + this.address + "," + this.Salary;
     }
 }

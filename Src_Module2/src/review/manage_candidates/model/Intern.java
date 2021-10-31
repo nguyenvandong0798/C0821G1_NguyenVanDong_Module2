@@ -1,6 +1,6 @@
 package review.manage_candidates.model;
 
-public class Intern extends  Candidates{
+public class Intern extends Candidates {
     private String majors;
     private int semester;
     private String uni;
@@ -39,9 +39,6 @@ public class Intern extends  Candidates{
 
     @Override
     public String toString() {
-        return super.toString() +
-                "| majors " + majors +
-                "| semester " + semester +
-                "| uni " + uni;
+        return super.toString() + ", " + this.majors + ", " + this.semester + ", " + this.uni;
     }
 }

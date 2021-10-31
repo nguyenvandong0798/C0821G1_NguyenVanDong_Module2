@@ -6,12 +6,15 @@ public class Experience extends Candidates {
     private String proSkill;
 
 
-
     public Experience(String name, String yearOfBirth, String address,
                       String numberPhone, String email, int type, int yearOfExperience, String proSkill) {
         super(name, yearOfBirth, address, numberPhone, email, type);
         this.yearOfExperience = yearOfExperience;
-        this.proSkill=proSkill;
+        this.proSkill = proSkill;
+    }
+
+    public Experience() {
+
     }
 
     public int getYearOfExperience() {
@@ -32,6 +35,6 @@ public class Experience extends Candidates {
 
     @Override
     public String toString() {
-        return super.toString() + " |yearOfExperience " + yearOfExperience + " |proSkill " + proSkill;
+        return super.toString() + ", " + this.yearOfExperience + ", " + this.proSkill;
     }
 }

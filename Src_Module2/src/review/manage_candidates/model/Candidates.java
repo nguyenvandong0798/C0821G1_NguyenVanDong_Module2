@@ -93,11 +93,6 @@ public class Candidates {
 
     @Override
     public String toString() {
-        return " |name " + name +
-                " |yearOfBirth " + yearOfBirth +
-                " |address " + address +
-                " |numberPhone " + numberPhone +
-                " |email " + email +
-                " |type " + type;
+        return this.name + ", " + this.yearOfBirth + ", " + this.address + ", " + this.numberPhone + ", " + this.email + ", " + this.type;
     }
 }

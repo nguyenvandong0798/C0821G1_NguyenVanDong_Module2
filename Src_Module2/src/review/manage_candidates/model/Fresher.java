@@ -13,12 +13,16 @@ public class Fresher extends Candidates {
 
     public Fresher(String name, String yearOfBirth, String address,
                    String numberPhone, String email, int type,
-                   String graduationYear, String rank, String uni,String uniWhere) {
+                   String graduationYear, String rank, String uni, String uniWhere) {
         super(name, yearOfBirth, address, numberPhone, email, type);
         this.graduationYear = graduationYear;
         this.rank = rank;
-        this.uni =uni;
+        this.uni = uni;
         this.uniWhere = uniWhere;
+    }
+
+    public Fresher() {
+
     }
 
     public String getGraduationYear() {
@@ -45,7 +49,7 @@ public class Fresher extends Candidates {
         this.uni = uni;
     }
 
-    public String uniWhere() {
+    public String getUniWhere() {
         return uniWhere;
     }
 
@@ -55,7 +59,6 @@ public class Fresher extends Candidates {
 
     @Override
     public String toString() {
-        return super.toString() + " |graduationYear "+ graduationYear + " |rank " + rank
-                + " |uni  " + uni + " |uniWhere " + uniWhere;
+        return super.toString() + ", " + this.graduationYear + ", " + this.rank + ", " + this.uni + ", " + this.uniWhere;
     }
 }

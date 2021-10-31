@@ -1,5 +1,6 @@
 package other.manageStaff.controller;
 
+import other.manageStaff.service.IsOfStaff;
 import other.manageStaff.service.ofStaff;
 
 import java.util.Scanner;
@@ -7,16 +8,13 @@ import java.util.Scanner;
 public class ManageStaff {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        IsOfStaff isOfStaff = new ofStaff();
         while(true){
-            System.out.println("HỆ THỐNG QUẢN LÝ NHÂN VIÊN + \n");
+            System.out.println("HỆ THỐNG QUẢN LÝ NHÂN VIÊN" + "\n");
             System.out.println("----------------------");
             System.out.println("1: thêm Staff vào danh sách");
-            System.out.println("2: Chỉnh sửa tên của Staff");
-            System.out.println("3: Hiển thị danh sách Staff");
-            System.out.println("4: Xoá bỏ Staff ra khỏi danh sách");
-            System.out.println("5: Nhập mã để hiển thị Staff");
-            System.out.println("6: Nhập số giời làm việc của Staff");
-            System.out.println("7: Sắp xếp Staff theo mã" + "\n");
+            System.out.println("2: Hiển thị Staff ");
+            System.out.println("3: tim kiem Staff " + "\n");
             System.out.println("0: Exit " + "\n");
             System.out.print("Nhập để chọn tính năng ");
 
@@ -27,8 +25,12 @@ public class ManageStaff {
             }
             switch (choice){
                 case 1:
-                    ofStaff.addStaff();
+                    isOfStaff.addStaff();
                     break;
+                case 2:
+                    isOfStaff.showAll();
+                case 3:
+                    isOfStaff.search();
                 case 0:
                     break;
             }
