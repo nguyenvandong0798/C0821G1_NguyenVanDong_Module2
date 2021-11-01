@@ -53,7 +53,7 @@ public class Fresher extends Candidates {
         return uniWhere;
     }
 
-    public void setUniWhere(String education) {
+    public void setUniWhere(String uniWhere) {
         this.uniWhere = uniWhere;
     }
 

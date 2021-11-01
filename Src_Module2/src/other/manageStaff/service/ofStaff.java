@@ -6,6 +6,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class ofStaff implements IsOfStaff {
     private static List<Staff> staffList = new ArrayList<>();
@@ -16,9 +17,18 @@ public class ofStaff implements IsOfStaff {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("nhập tên Staff cần thêm ");
-        String name = (scanner.nextLine());
-        staff.setName(name);
-
+        String name;
+        while (true){
+            name = (scanner.nextLine());
+        if (Pattern.matches("[a-zA-Z]{4,}",name))
+            try {
+                throw new Exception("not suitable");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            staff.setName(name);
+            break;
+        }
         System.out.print("nhập ngày tháng năm sinh Staff ");
         int date = Integer.parseInt(scanner.nextLine());
         staff.setDate(date);
@@ -46,7 +56,7 @@ public class ofStaff implements IsOfStaff {
 
     private void addStaff(Staff staff) {
         try {
-            FileWriter fileWriter = new FileWriter("Staff.csv", true);
+            FileWriter fileWriter = new FileWriter("src\\other\\manageStaff\\file\\Staff.csv", true);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             bufferedWriter.write(staff.toString());
             bufferedWriter.newLine();
@@ -60,7 +70,7 @@ public class ofStaff implements IsOfStaff {
     public void showAll() {
         staffList = new ArrayList<>();
         try {
-            FileReader fileReader = new FileReader("Staff.csv");
+            FileReader fileReader = new FileReader("src\\other\\manageStaff\\file\\Staff.csv");
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String line;
             while ((line = bufferedReader.readLine()) != null) {
@@ -95,7 +105,7 @@ public class ofStaff implements IsOfStaff {
         String ser = scanner.nextLine();
 
         try {
-            FileReader fileReader = new FileReader("Staff.csv");
+            FileReader fileReader = new FileReader("src\\other\\manageStaff\\file\\Staff.csv");
             BufferedReader bufferedReader =new BufferedReader(fileReader);
             String line;
 //            Scanner scanner1 = new Scanner(fileReader);
