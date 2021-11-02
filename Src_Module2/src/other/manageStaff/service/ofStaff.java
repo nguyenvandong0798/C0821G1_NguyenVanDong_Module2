@@ -1,6 +1,7 @@
 package other.manageStaff.service;
 
 import other.manageStaff.model.Staff;
+import s019_design_pattern.practice.singleton.BookBorrower;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -12,46 +13,74 @@ public class ofStaff implements IsOfStaff {
     private static List<Staff> staffList = new ArrayList<>();
 
     public void addStaff() {
-        Staff staff = new Staff();
+        while (true) {
+            Staff staff = new Staff();
 
-        Scanner scanner = new Scanner(System.in);
+            Scanner scanner = new Scanner(System.in);
 
-        System.out.print("nhập tên Staff cần thêm ");
-        String name;
-        while (true){
-            name = (scanner.nextLine());
-        if (Pattern.matches("[a-zA-Z]{4,}",name))
-            try {
-                throw new Exception("not suitable");
-            } catch (Exception e) {
-                e.printStackTrace();
+//        System.out.print("nhập id của bạn ");
+            int id = 0;
+            staff.setId(id);
+
+            System.out.print("nhập tên Staff cần thêm ");
+            String name;
+            while (true) {
+                name = (scanner.nextLine());
+                try {
+                    if (!(Pattern.matches("^[a-zA-Z ]{4,30}$", name))) {
+                        throw new Exception("not suitable enter again: ");
+                    }
+                    break;
+                } catch (Exception e) {
+                    {
+                        System.out.println(e.getMessage());
+                    }
+                }
             }
             staff.setName(name);
-            break;
+
+            System.out.print("nhập ngày tháng năm sinh Staff ");
+            int date = Integer.parseInt(scanner.nextLine());
+            staff.setDate(date);
+
+            System.out.print("nhập code của staff ");
+            int code = Integer.parseInt(scanner.nextLine());
+            staff.setCode(code);
+
+            System.out.print("nhập địa chỉ của Staff ");
+            String address = (scanner.nextLine());
+            staff.setAddress(address);
+
+            System.out.print("nhập sđt ");
+            String number;
+            while (true) {
+                number = (scanner.nextLine());
+                try {
+                    if (!(Pattern.matches("^09| 03+[0-9]{8}$", number))) {
+                        throw new Exception("not suitable enter again: ");
+                    }
+                    break;
+                } catch (Exception e) {
+                    {
+                        System.out.println(e.getMessage());
+                    }
+                }
+            }
+            staff.setNumberPhone(number);
+
+            Staff st = new Staff(id, name, date, code, address, number);
+            staffList.add(st);
+            for (int i = 0; i < staffList.size(); i++) {
+                System.out.println(staffList.get(i));
+            }
+            this.addStaff(staff);
+
+            System.out.println("do you want continuen ");
+            String choice = (scanner.nextLine());
+            if (choice.equals("N")){
+                break;
+            }
         }
-        System.out.print("nhập ngày tháng năm sinh Staff ");
-        int date = Integer.parseInt(scanner.nextLine());
-        staff.setDate(date);
-
-        System.out.print("nhập code của staff ");
-        int code = Integer.parseInt(scanner.nextLine());
-        staff.setCode(code);
-
-        System.out.print("nhập địa chỉ của Staff ");
-        String address = (scanner.nextLine());
-        staff.setAddress(address);
-
-        System.out.print("nhập giời công Staff ");
-        int workData = Integer.parseInt(scanner.nextLine());
-        long salary = workData * 30000;
-        staff.setSalary(salary);
-
-        Staff st = new Staff(name, date, code, address, salary);
-        staffList.add(st);
-        for (int i = 0; i < staffList.size(); i++) {
-            System.out.println(staffList.get(i));
-        }
-        this.addStaff(staff);
     }
 
     private void addStaff(Staff staff) {
@@ -75,8 +104,8 @@ public class ofStaff implements IsOfStaff {
             String line;
             while ((line = bufferedReader.readLine()) != null) {
                 String[] staff = line.split(" ,");
-                Staff staff1 = new Staff(staff[0], Integer.parseInt(staff[1]), Integer.parseInt(staff[2]),
-                        staff[3], Integer.parseInt(staff[4]));
+                Staff staff1 = new Staff(Integer.parseInt(staff[0]),staff[1], Integer.parseInt(staff[2]), Integer.parseInt(staff[3]),
+                        staff[4], staff[5]);
                 staffList.add(staff1);
             }
             bufferedReader.close();
@@ -89,14 +118,14 @@ public class ofStaff implements IsOfStaff {
     }
 
 
-
     private void show() {
         System.out.println("staff list");
         for (Staff staff : staffList) {
-            System.out.println(staff.getName() + ", " + staff.getDate() + ", " + staff.getCode()
-                    + ", " + staff.getAddress() + ", " + staff.getSalary());
+            System.out.println(staff.getId() + ", " + staff.getName() + ", " + staff.getDate() + ", " + staff.getCode()
+                    + ", " + staff.getAddress() + ", " + staff.getNumberPhone());
         }
     }
+
     @Override
     public void search() {
         staffList = new ArrayList<>();
@@ -106,14 +135,14 @@ public class ofStaff implements IsOfStaff {
 
         try {
             FileReader fileReader = new FileReader("src\\other\\manageStaff\\file\\Staff.csv");
-            BufferedReader bufferedReader =new BufferedReader(fileReader);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
             String line;
 //            Scanner scanner1 = new Scanner(fileReader);
-            while ((line = bufferedReader.readLine())!=null){
+            while ((line = bufferedReader.readLine()) != null) {
                 if (line.startsWith(ser)) {
                     String[] staff = line.split(" ,");
-                    Staff staff1 = new Staff(staff[0], Integer.parseInt(staff[1]), Integer.parseInt(staff[2]),
-                            staff[3], Integer.parseInt(staff[4]));
+                    Staff staff1 = new Staff(Integer.parseInt(staff[0]),staff[1], Integer.parseInt(staff[2]), Integer.parseInt(staff[3]),
+                            staff[4], staff[5]);
                     staffList.add(staff1);
                 }
             }
@@ -125,11 +154,12 @@ public class ofStaff implements IsOfStaff {
             e.printStackTrace();
         }
     }
+
     private void fin() {
         System.out.println("staff list");
         for (Staff staff : staffList) {
-            System.out.println(staff.getName() + ", " + staff.getDate() + ", " + staff.getCode()
-                    + ", " + staff.getAddress() + ", " + staff.getSalary());
+            System.out.println(staff.getId() + ", " + staff.getName() + ", " + staff.getDate() + ", " + staff.getCode()
+                    + ", " + staff.getAddress() + ", " + staff.getNumberPhone());
         }
     }
 }

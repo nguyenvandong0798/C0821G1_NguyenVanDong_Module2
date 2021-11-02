@@ -1,23 +1,32 @@
 package other.manageStaff.model;
 
 public class Staff {
+    private int id;
     private String name;
     private int Date;
     private int code;
     private String address;
-    private Long Salary;
+    private String numberPhone;
 
     public Staff() {
     }
 
-    public Staff(String name, int Date, int code, String address, long salary) {
+    public Staff(int id, String name, int Date, int code, String address, String numberPhone) {
+        this.id = id;
         this.name = name;
         this.Date = Date;
         this.code = code;
         this.address = address;
-        this.Salary = salary;
+        this.numberPhone = numberPhone;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -51,16 +60,16 @@ public class Staff {
         this.address = address;
     }
 
-    public Long getSalary() {
-        return Salary;
+    public String getNumberPhone() {
+        return numberPhone;
     }
 
-    public void setSalary(Long salary) {
-        Salary = salary;
+    public void setNumberPhone(String numberPhone) {
+        this.numberPhone = numberPhone;
     }
 
     @Override
     public String toString() {
-        return this.name + "," + this.Date + "," + this.code + "," + this.address + "," + this.Salary;
+        return this.id + "," + this.name + "," + this.Date + "," + this.code + "," + this.address + "," + this.numberPhone;
     }
 }
