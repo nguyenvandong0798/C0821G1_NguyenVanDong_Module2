@@ -3,6 +3,7 @@ package other.manageStaff.controller;
 import other.manageStaff.service.IsOfStaff;
 import other.manageStaff.service.ofStaff;
 
+import java.text.BreakIterator;
 import java.util.Scanner;
 
 public class ManageStaff {
@@ -14,7 +15,8 @@ public class ManageStaff {
             System.out.println("----------------------");
             System.out.println("1: thêm Staff vào danh sách");
             System.out.println("2: Hiển thị Staff ");
-            System.out.println("3: tim kiem Staff " + "\n");
+            System.out.println("3: tim kiem Staff ");
+            System.out.println("4: xoa Staff " + "\n");
             System.out.println("0: Exit " + "\n");
             System.out.print("Nhập để chọn tính năng ");
 
@@ -29,8 +31,13 @@ public class ManageStaff {
                     break;
                 case 2:
                     isOfStaff.showAll();
+                    break;
                 case 3:
                     isOfStaff.search();
+                    break;
+                case 4:
+                    isOfStaff.remove();
+                    break;
                 case 0:
                     break;
             }

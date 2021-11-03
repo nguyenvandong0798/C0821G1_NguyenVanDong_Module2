@@ -1,10 +1,10 @@
 package review.manage_candidates.controller;
 
-import review.manage_candidates.service.inter.IsFresherService;
-import review.manage_candidates.service.is_service.ExperienceService;
-import review.manage_candidates.service.inter.IsExperienceService;
-import review.manage_candidates.service.is_service.FresherService;
-import review.manage_candidates.service.is_service.InternshipService;
+import review.manage_candidates.candidates_service.implement.IsFresherService;
+import review.manage_candidates.candidates_service.service.ExperienceService;
+import review.manage_candidates.candidates_service.implement.IsExperienceService;
+import review.manage_candidates.candidates_service.service.FresherService;
+import review.manage_candidates.candidates_service.service.InternshipService;
 
 import java.text.ParseException;
 import java.util.Scanner;

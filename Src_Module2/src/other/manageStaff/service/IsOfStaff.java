@@ -7,4 +7,6 @@ public interface IsOfStaff {
     void showAll();
 
     void search();
+
+    void remove();
 }

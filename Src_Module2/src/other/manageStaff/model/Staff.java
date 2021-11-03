@@ -3,15 +3,15 @@ package other.manageStaff.model;
 public class Staff {
     private int id;
     private String name;
-    private int Date;
-    private int code;
+    private String Date;
+    private String code;
     private String address;
     private String numberPhone;
 
     public Staff() {
     }
 
-    public Staff(int id, String name, int Date, int code, String address, String numberPhone) {
+    public Staff(int id, String name, String Date, String code, String address, String numberPhone) {
         this.id = id;
         this.name = name;
         this.Date = Date;
@@ -36,19 +36,19 @@ public class Staff {
         this.name = name;
     }
 
-    public int getDate() {
+    public String getDate() {
         return Date;
     }
 
-    public void setDate(int Date) {
+    public void setDate(String Date) {
         this.Date = Date;
     }
 
-    public int getCode() {
+    public String getCode() {
         return code;
     }
 
-    public void setCode(int code) {
+    public void setCode(String code) {
         this.code = code;
     }
 
